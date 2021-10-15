@@ -59,6 +59,13 @@
 			"title": "Ez-Monitoring",
 			"description": "This is a Monitoring application which is written in <span class=\"nodejs\">NodeJs</span> and <span class=\"js\">JavaScript</span> and it displays the uptime, cpu, ram e.g. of each server! Actually is an bundle of 3 Projects Firstyl the Core which runs once on a server and is obviously the backend! Secondly the Client which is obviously the frontend and runs the Website and Lastly the Slave which runs on all Servers you want to have Monitor Informations from!",
 			"ghLink": "https://github.com/users/Jodu555/projects/2"
+		},
+		{
+			"icon": false,
+			"lText": "JWork",
+			"title": "JWork",
+			"description": "An web Framework written in <span class=\"js\">JavaScript</span> for general Testing purposes and to learn how big Frameworks like <span class=\"react\">React</span> or <span class=\"vue\">Vue</span> nearly handle those things!",
+			"ghLink": "https://github.com/Jodu555/JWork"
 		}
 	]
 }

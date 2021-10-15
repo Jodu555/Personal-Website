@@ -1,0 +1,40 @@
+.diary {
+    font-family: 'Architects Daughter', cursive;
+}
+.enter {
+    height: 50vh;
+}
+.avatar {
+    height: 80vh;
+}
+.middle {
+    transform: translateY(calc(50vh - 100% - 5.5rem));
+}
+.info-text {
+    font-weight: 400;
+    color: #333333;
+}
+.highlight {
+    font-weight: 500;
+}
+.java {
+    color: #e97b18;
+}
+.js {
+    color: #ead41c;
+}
+.php {
+    color: #8892bf;
+}
+.nodejs {
+    color: #026e00;
+}
+.angular {
+    color: #dd0031;
+}
+.react {
+    color: #61dafb;
+}
+.vue {
+    color: #42b983;
+}

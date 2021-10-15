@@ -1,0 +1,64 @@
+{
+	"quotes": [
+		"<b>First</b> be kind to <b>yourself</b>! <b>Before</b> You can be kind to <b>others</b>!",
+		"It`s a <b>good Day</b> to have a <b>good Day</b>!",
+		"Be so completely yourself that everyone else feels safe to be themselves too.",
+		"I am surrounded by People who Believe in me."
+	],
+	"projects": [
+		{
+			"icon": false,
+			"lText": "ISD",
+			"title": "Instagram Downloader",
+			"description": "This is an <span class=\"nodejs\">NodeJs</span> Application wich can download Storys or Videos or IGTv's from particular Users",
+			"ghLink": "https://github.com/Jodu555/Instagram-Story-Downloader"
+		},
+		{
+			"icon": true,
+			"lText": "images/hosterList.ico",
+			"title": "Hoster-List",
+			"description": "This is an <span class=\"nodejs\">NodeJs</span> and <span class=\"js\">JavaScript</span> Application! In Which i store all the servers i've bought to keep track of the uptime or Performance and the Price",
+			"ghLink": "http://github.com/Jodu555/hosterList",
+			"pLink": "https://hoster-info.de"
+		},
+		{
+			"icon": false,
+			"lText": "MySqlApi",
+			"title": "MySQLApi",
+			"description": "An Extreme Useful MySqLWrapper in <span class=\"nodejs\">NodeJs</span> build on the basic mysql package with Object Relational Wrappers a Table Creation feature also timestamp features eg.",
+			"ghLink": "https://github.com/Jodu555/MySQLWrapper",
+			"pLink": "https://www.npmjs.com/package/@jodu555/mysqlapi"
+		},
+		{
+			"icon": false,
+			"lText": "Netty\nBackend",
+			"title": "Netty-Backend",
+			"description": "A Whole NettyBackend written in <span class=\"java\">Java</span> used like Express with middlewares and routes",
+			"ghLink": "https://github.com/Jodu555/MySQLWrapper",
+			"pLink": "https://www.npmjs.com/package/@jodu555/mysqlapi"
+		},
+		{
+			"icon": false,
+			"lText": "Amazon\nPrice\nTracker",
+			"title": "Amazon-Price-Tracker",
+			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user get mailed!",
+			"ghLink": "https://github.com/Jodu555/MySQLWrapper",
+			"pLink": "https://www.npmjs.com/package/@jodu555/mysqlapi"
+		},
+		{
+			"icon": false,
+			"lText": "Ez-Uploader",
+			"title": "Ez-Uploader",
+			"description": "An Image and Text Uploader written in <span class=\"nodejs\">NodeJs</span> with the abillity to sort them in nested folders or also share ",
+			"ghLink": "https://github.com/Jodu555/Ez-uploader.de",
+			"pLink": "https://ez-uploader.de"
+		},
+		{
+			"icon": false,
+			"lText": "Ez-Monitoring",
+			"title": "Ez-Monitoring",
+			"description": "This is a Monitoring application which is written in <span class=\"nodejs\">NodeJs</span> and <span class=\"js\">JavaScript</span> and it displays the uptime, cpu, ram e.g. of each server! Actually is an bundle of 3 Projects Firstyl the Core which runs once on a server and is obviously the backend! Secondly the Client which is obviously the frontend and runs the Website and Lastly the Slave which runs on all Servers you want to have Monitor Informations from!",
+			"ghLink": "https://github.com/users/Jodu555/projects/2"
+		}
+	]
+}

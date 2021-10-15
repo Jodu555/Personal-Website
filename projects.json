@@ -66,6 +66,13 @@
 			"title": "JWork",
 			"description": "An web Framework written in <span class=\"js\">JavaScript</span> for general Testing purposes and to learn how big Frameworks like <span class=\"react\">React</span> or <span class=\"vue\">Vue</span> nearly handle those things!",
 			"ghLink": "https://github.com/Jodu555/JWork"
+		},
+		{
+			"icon": false,
+			"lText": "WebStats",
+			"title": "Server WebStats-Plugin",
+			"description": "This is an Minecraft Web Stats Plugin written in <span class=\"js\">JavaScript</span> for the Frontend and in <span class=\"java\">Java</span> for the Backend and made to fast and simple view stats from the minecraft server!",
+			"ghLink": "https://github.com/Jodu555/JWork"
 		}
 	]
 }

@@ -18,7 +18,7 @@ let quouteIdx;
             currentRow.classList.add('row');
             projectStore.appendChild(currentRow);
         }
-        if (i % 4 == 0)
+        if (i % 4 == 0 && i != projects.length)
             insertQuote(projectStore);
 
         appendProject(currentRow, project, i);

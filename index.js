@@ -38,21 +38,22 @@ function insertQuote(element) {
     quouteIdx++;
 }
 
-// removeHash();
+removeHash();
 
 function removeHash() {
     const loc = window.location
     let scrollV, scrollH;
-    if ("pushState" in history)
-        history.pushState("", document.title, loc.pathname + loc.search);
-    else {
+    if (loc.hash.includes('ext-')) {
+        loc.hash = loc.hash.split('ext-')[1];
+    } else {
         scrollV = document.body.scrollTop;
         scrollH = document.body.scrollLeft;
-
-        loc.hash = "";
-
+        loc.hash = '';
         document.body.scrollTop = scrollV;
         document.body.scrollLeft = scrollH;
+    }
+    if ("pushState" in history) {
+        history.pushState("", document.title, loc.pathname + loc.search);
     }
 }
 

@@ -38,6 +38,24 @@ function insertQuote(element) {
     quouteIdx++;
 }
 
+// removeHash();
+
+function removeHash() {
+    const loc = window.location
+    let scrollV, scrollH;
+    if ("pushState" in history)
+        history.pushState("", document.title, loc.pathname + loc.search);
+    else {
+        scrollV = document.body.scrollTop;
+        scrollH = document.body.scrollLeft;
+
+        loc.hash = "";
+
+        document.body.scrollTop = scrollV;
+        document.body.scrollLeft = scrollH;
+    }
+}
+
 function appendProject(row, project, i) {
     const col = document.createElement('div');
     col.classList.add('col');

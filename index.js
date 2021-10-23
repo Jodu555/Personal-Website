@@ -14,7 +14,10 @@ window.addEventListener('scroll', (e) => {
     }
 })
 
-
+function isScrolledIntoView(sel) {
+    const rect = document.querySelector(sel).getBoundingClientRect();
+    return rect.bottom < window.innerHeight;
+}
 
 function isElementInView(sel) {
     const rect = document.querySelector(sel).getBoundingClientRect();

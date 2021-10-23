@@ -1,10 +1,10 @@
-
-
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 let quotes;
 let quouteIdx;
+let projects;
+let projectIdx;
 
 window.addEventListener('scroll', (e) => {
     const selector = '#about';
@@ -31,23 +31,53 @@ function isUnder(sel) {
     const data = await response.json()
     quotes = data.quotes;
     quouteIdx = 0;
-    const projects = data.projects;
-    let i = 0;
+    projectIdx = 0;
+    projects = data.projects.chunkIt(4);
+
+    loadMoreProjects();
+})();
+
+function loadMoreProjects() {
+    document.querySelector('#loadmoreBtn') && document.querySelector('#loadmoreBtn').remove();
     let currentRow;
-    projects.forEach((project) => {
+    let i = 0;
+    if (projectIdx >= projects.length)
+        projectIdx = 0;
+    projects[projectIdx].forEach((project) => {
         i++;
         if ((!currentRow) || i % 2 !== 0 && i != 1) {
             currentRow = document.createElement('div');
             currentRow.classList.add('row');
             projectStore.appendChild(currentRow);
         }
-        if (i % 4 == 0 && i != projects.length)
+
+        if (i == projects[projectIdx].length)
             insertQuote(projectStore);
 
         appendProject(currentRow, project, i);
     });
+    if (!(projects.length <= projectIdx + 1))
+        addLoadMoreProjectsButton(projectStore);
 
-})();
+}
+
+function addLoadMoreProjectsButton(element) {
+    const div = document.createElement('div');
+    div.classList.add('text-center');
+    div.style.marginTop = '10vh';
+    div.setAttribute('data-aos', 'fade-down');
+    const button = document.createElement('button');
+    button.id = 'loadmoreBtn';
+    button.classList.add('btn')
+    button.classList.add('btn-outline-primary')
+    button.innerText = 'Load More';
+    div.appendChild(button);
+    element.appendChild(div)
+    button.addEventListener('click', () => {
+        projectIdx++;
+        loadMoreProjects();
+    })
+}
 
 function insertQuote(element) {
     const h3 = document.createElement('h3');

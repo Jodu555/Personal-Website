@@ -76,9 +76,27 @@
 					</div>
 				</div>
 			</nav>
+			<div
+				class="offcanvas offcanvas-start"
+				data-bs-scroll="true"
+				data-bs-backdrop="false"
+				tabindex="-1"
+				id="offcanvasScrolling"
+				aria-labelledby="offcanvasScrollingLabel"
+				style="width: 5.5rem"
+			>
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Navigation</h5>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+						<!-- Home, Who I Am, Projects, Timeline, Stats, GitHub -->
+					</ul>
+				</div>
+			</div>
 		</header>
 		<main>
-			<section class="container-fluid vh-100" data-aos="zoom-in-up">
+			<section id="home" class="container-fluid vh-100" data-aos="zoom-in-up">
 				<div class="text-center enter middle">
 					<img src="images/avatar.png" class="avatar" style="margin-top: 5ch" alt="Avatar" />
 				</div>
@@ -104,28 +122,7 @@
 					</div>
 				</div>
 			</section>
-			<div
-				class="offcanvas offcanvas-start"
-				data-bs-scroll="true"
-				data-bs-backdrop="false"
-				tabindex="-1"
-				id="offcanvasScrolling"
-				aria-labelledby="offcanvasScrollingLabel"
-				style="width: 4.5rem"
-			>
-				<div class="offcanvas-header">
-					<h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
-					<button
-						type="button"
-						class="btn-close text-reset"
-						data-bs-dismiss="offcanvas"
-						aria-label="Close"
-					></button>
-				</div>
-				<div class="offcanvas-body">
-					<p>Try scrolling the rest of the page to see this option in action.</p>
-				</div>
-			</div>
+
 			<section id="about" class="container">
 				<h1 class="text-center" data-aos="fade-down">Who I Am?</h1>
 				<hr data-aos="fade-down" />

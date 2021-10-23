@@ -1,7 +1,24 @@
 const projectStore = document.querySelector('#projectStore');
+const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 let quotes;
 let quouteIdx;
+
+window.addEventListener('scroll', (e) => {
+    const selector = '#sidenav-trigger';
+    // if (isElementInView(selector)) {
+    //     bsOffcanvas.hide();
+    // }
+    if (isScrolledIntoView(selector)) {
+        bsOffcanvas.show();
+    }
+})
+
+function isScrolledIntoView(sel) {
+    const rect = document.querySelector(sel).getBoundingClientRect();
+    const isVisible = (rect.top >= 0) && (rect.bottom <= window.innerHeight);
+    return isVisible;
+}
 
 (async () => {
     const response = await fetch('projects.json');

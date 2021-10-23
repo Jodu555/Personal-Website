@@ -1,3 +1,5 @@
+
+
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
@@ -6,20 +8,20 @@ let quouteIdx;
 
 window.addEventListener('scroll', (e) => {
     const selector = '#about';
-    if (isElementInView(selector)) {
+    if (isUnder(selector)) {
         bsOffcanvas.hide();
     }
-    if (isScrolledIntoView(selector)) {
+    if (isOver(selector)) {
         bsOffcanvas.show();
     }
 })
 
-function isScrolledIntoView(sel) {
+function isOver(sel) {
     const rect = document.querySelector(sel).getBoundingClientRect();
     return rect.bottom < window.innerHeight;
 }
 
-function isElementInView(sel) {
+function isUnder(sel) {
     const rect = document.querySelector(sel).getBoundingClientRect();
     return rect.top > window.innerHeight;
 }

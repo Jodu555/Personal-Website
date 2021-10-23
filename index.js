@@ -5,7 +5,7 @@ let quotes;
 let quouteIdx;
 
 window.addEventListener('scroll', (e) => {
-    const selector = '#sidenav-trigger';
+    const selector = '#about';
     if (isElementInView(selector)) {
         bsOffcanvas.hide();
     }

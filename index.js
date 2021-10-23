@@ -14,14 +14,10 @@ window.addEventListener('scroll', (e) => {
     }
 })
 
-function isScrolledIntoView(sel) {
-    const rect = document.querySelector(sel).getBoundingClientRect();
-    const isVisible = (rect.top >= 0) && (rect.bottom <= window.innerHeight);
-    return isVisible;
-}
+
 
 function isElementInView(sel) {
-    var rect = document.querySelector(sel).getBoundingClientRect();
+    const rect = document.querySelector(sel).getBoundingClientRect();
     return rect.top > window.innerHeight;
 }
 

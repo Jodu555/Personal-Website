@@ -6,6 +6,8 @@ let quouteIdx;
 let projects;
 let projectIdx;
 
+
+
 window.addEventListener('scroll', (e) => {
     const selector = '#about';
     if (isUnder(selector)) {

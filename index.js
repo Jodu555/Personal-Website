@@ -11,9 +11,11 @@ setInterval(() => {
 }, 1000);
 
 function renderFirstRepo() {
+    animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
+    animateCountDown('last-commit-', new Date('24 Oct 2021 14:17').getTime());
+}
 
-
-    const till = new Date('6 Jun 2019 19:17').getTime();
+function animateCountDown(prefix, till) {
     const now = Date.now();
     const diff = now - till
 
@@ -22,12 +24,11 @@ function renderFirstRepo() {
     const hour = minute * 60;
     const day = hour * 24;
 
-    document.querySelector('#day').innerText = Math.floor(diff / day);
-    document.querySelector('#hour').innerText = Math.floor((diff % day) / hour);
-    document.querySelector('#minute').innerText = Math.floor((diff % hour) / minute);
-    document.querySelector('#second').innerText = Math.floor((diff % minute) / second);
+    document.querySelector('#' + prefix + 'day').innerText = Math.floor(diff / day);
+    document.querySelector('#' + prefix + 'hour').innerText = Math.floor((diff % day) / hour);
+    document.querySelector('#' + prefix + 'minute').innerText = Math.floor((diff % hour) / minute);
+    document.querySelector('#' + prefix + 'second').innerText = Math.floor((diff % minute) / second);
 
-    console.log(diff);
 }
 
 window.addEventListener('scroll', (e) => {

@@ -1,3 +1,4 @@
+const stats_API_URL = 'http://localhost:3100/api/lastCommit/Jodu555'
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
@@ -6,13 +7,19 @@ let quouteIdx;
 let projects;
 let projectIdx;
 
+let lastUpdatedInfo;
+
 setInterval(() => {
     renderFirstRepo();
 }, 1000);
 
+setInterval(() => {
+    loadLastUpdateData();
+}, 250000);
+
 function renderFirstRepo() {
     animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
-    animateCountDown('last-commit-', new Date('24 Oct 2021 14:17').getTime());
+    animateCountDown('last-commit-', lastUpdatedInfo.lastUpdated);
 }
 
 function animateCountDown(prefix, till) {
@@ -51,9 +58,17 @@ function isUnder(sel) {
     return rect.top > window.innerHeight;
 }
 
+async function loadLastUpdateData() {
+    const response = await fetch(stats_API_URL);
+    const data = await response.json();
+    lastUpdatedInfo = data.data.info;
+}
+
 (async () => {
+    loadLastUpdateData();
+
     const response = await fetch('projects.json');
-    const data = await response.json()
+    const data = await response.json();
     quotes = data.quotes;
     quouteIdx = 0;
     projectIdx = 0;

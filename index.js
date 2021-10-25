@@ -19,7 +19,7 @@ setInterval(() => {
 
 function renderFirstRepo() {
     animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
-    animateCountDown('last-commit-', lastUpdatedInfo.lastUpdated);
+    animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
 }
 
 function animateCountDown(prefix, till) {

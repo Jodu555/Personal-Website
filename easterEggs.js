@@ -1,6 +1,6 @@
 document.querySelector('#secret-caller-ca').addEventListener('click', (e) => {
     const height = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-    spawnHanf(12, height);
+    spawnHanf(20, height);
     window.requestAnimationFrame(animateHanf);
 });
 
@@ -28,12 +28,11 @@ function animateHanf() {
     let next = true;
     if ([...document.querySelectorAll('#hanf-animate')].length == 0)
         next = false;
-    console.log('called');
     [...document.querySelectorAll('#hanf-animate')].forEach(element => {
         if (Number(element.style.top.split('px')[0]) >= 0) {
             element.remove();
         }
-        const top = `${Number(element.style.top.split('px')[0]) + Math.floor(Math.random() * 25)}px`;
+        const top = `${Number(element.style.top.split('px')[0]) + Math.floor(Math.random() * 20)}px`;
         element.style.top = top;
     });
     if (next)

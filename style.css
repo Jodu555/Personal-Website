@@ -38,3 +38,11 @@
 .vue {
     color: #42b983;
 }
+
+#secret-caller-ca {
+    cursor: pointer;
+}
+
+#hanf-animate {
+    transition: all 1s linear;
+}

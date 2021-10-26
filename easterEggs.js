@@ -1,15 +1,21 @@
 document.querySelector('#secret-caller-ca').addEventListener('click', (e) => {
     const height = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
-    spawnHanf(20, height);
+    spawnHanf(10, height);
     window.requestAnimationFrame(animateHanf);
 });
+
+function map(value, in_min, in_max, out_min, out_max) {
+    const calc = (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    return calc;
+}
 
 function spawnHanf(rows, height) {
     for (let i = 0; i < rows; i++) {
         for (let i = 0; i < Math.floor(window.innerWidth / 128); i++) {
             const span = document.createElement('span');
             span.id = 'hanf-animate';
-            span.style.left = (i) + 'px';
+            const left = map(Math.floor(Math.random() * 15) + 128, 0, 200, 0, (window.innerWidth / 128));
+            span.style.left = (left) + 'px';
             span.style.top = `-${height + (rows * 128)}px`;
             span.style.position = 'relative';
 
@@ -32,7 +38,7 @@ function animateHanf() {
         if (Number(element.style.top.split('px')[0]) >= 0) {
             element.remove();
         }
-        const top = `${Number(element.style.top.split('px')[0]) + Math.floor(Math.random() * 20)}px`;
+        const top = `${Number(element.style.top.split('px')[0]) + Math.floor(Math.random() * 55)}px`;
         element.style.top = top;
     });
     if (next)

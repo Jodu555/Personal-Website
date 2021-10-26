@@ -1,4 +1,5 @@
-const stats_API_URL = 'http://localhost:3100/api/lastCommit/Jodu555'
+// const stats_API_URL = 'http://localhost:3100/api/lastCommit/Jodu555'
+const stats_API_URL = 'http://github-stats.jodu555.de/api/lastCommit/Jodu555'
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
@@ -10,14 +11,14 @@ let projectIdx;
 let lastUpdatedInfo;
 
 setInterval(() => {
-    renderFirstRepo();
+    renderStats();
 }, 1000);
 
 setInterval(() => {
     loadLastUpdateData();
 }, 250000);
 
-function renderFirstRepo() {
+function renderStats() {
     animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
     animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
 }

@@ -1,13 +1,15 @@
+function map(value, in_min, in_max, out_min, out_max) {
+    const calc = (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+    return calc;
+}
+
 document.querySelector('#secret-caller-ca').addEventListener('click', (e) => {
     const height = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
     spawnHanf(10, height);
     window.requestAnimationFrame(animateHanf);
 });
 
-function map(value, in_min, in_max, out_min, out_max) {
-    const calc = (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-    return calc;
-}
+
 
 function spawnHanf(rows, height) {
     for (let i = 0; i < rows; i++) {

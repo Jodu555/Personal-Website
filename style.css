@@ -46,3 +46,7 @@
 #hanf-animate {
     transition: all 1s linear;
 }
+
+#secret-caller-lig {
+    cursor: pointer;
+}

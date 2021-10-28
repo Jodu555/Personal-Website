@@ -15,6 +15,19 @@ document.querySelector('#secret-caller-lig').addEventListener('click', (e) => {
     window.requestAnimationFrame(animateLightsaber);
 });
 
+function spawnLightsaber(height) {
+    const img = document.createElement('img');
+    img.src = '/images/lightsaber.png';
+    img.width = window.innerWidth * 0.9;
+    img.height = window.innerHeight;
+    img.style.top = `-${height + (img.height / 4)}px`;
+    img.style.left = (window.innerWidth - (img.width - img.width / 2)) + 'px';
+    img.style.position = 'relative';
+    img.style.transform = `rotateZ(270deg)`;
+    img.id = 'lightsaber-animate';
+    document.body.appendChild(img);
+}
+
 
 
 function spawnHanf(rows, height) {

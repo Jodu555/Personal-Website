@@ -43,7 +43,16 @@ function animateLightsaber() {
         // console.log(rotate);
         element.style.transform = rotate;
 
+        //TODO: let the lightsaber drop down and rotate it like it would hit
 
+        // let deg = element.getAttribute('data-rotation') || 0;
+        // deg > 360 && (deg = 0);
+        // Math.floor(Math.random() * 4) == 2 && (deg += 1);
+        // element.style.transform = `rotateZ(${deg}deg)`;
+        // element.removeAttribute('data-rotation');
+        // element.setAttribute('data-rotation', deg);
+        // const top = `${Number(element.style.top.split('px')[0]) + Math.floor(Math.random() * 55)}px`;
+        // element.style.top = top;
     });
     if (next)
         window.requestAnimationFrame(animateLightsaber);

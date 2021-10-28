@@ -9,6 +9,12 @@ document.querySelector('#secret-caller-ca').addEventListener('click', (e) => {
     window.requestAnimationFrame(animateHanf);
 });
 
+document.querySelector('#secret-caller-lig').addEventListener('click', (e) => {
+    const height = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
+    spawnLightsaber(height);
+    window.requestAnimationFrame(animateLightsaber);
+});
+
 
 
 function spawnHanf(rows, height) {

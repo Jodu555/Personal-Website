@@ -28,7 +28,26 @@ function spawnLightsaber(height) {
     document.body.appendChild(img);
 }
 
+function animateLightsaber() {
+    let next = true;
+    if ([...document.querySelectorAll('#lightsaber-animate')].length == 0)
+        next = false;
 
+    [...document.querySelectorAll('#lightsaber-animate')].forEach(element => {
+        if (Number(element.style.left.split('px')[0]) <= -(element.width * 4)) {
+            element.remove();
+        }
+        const left = `${Number(element.style.left.split('px')[0]) - Math.floor(Math.random() * 150) + 10}px`;
+        element.style.left = left;
+        const rotate = `rotateZ(${Number(element.style.left.split('px')[0]) / (4 * 4)}deg)`;
+        // console.log(rotate);
+        element.style.transform = rotate;
+
+
+    });
+    if (next)
+        window.requestAnimationFrame(animateLightsaber);
+}
 
 function spawnHanf(rows, height) {
     for (let i = 0; i < rows; i++) {

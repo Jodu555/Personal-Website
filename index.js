@@ -1,5 +1,4 @@
-// const stats_API_URL = 'http://localhost:3100/api/lastCommit/Jodu555'
-const stats_API_URL = 'http://github-stats.jodu555.de/api/lastCommit/Jodu555'
+const stats_API_URL = 'https://github-stats.jodu555.de/api/lastCommit/Jodu555'
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 

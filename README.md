@@ -5,7 +5,7 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
 * [x] Only display 4 projects show a load more button
 * [ ] More Stats
     * [x] First created Projects
-    * [ ] Last commit
-* [ ] Add some secrets
-    * [ ] 420
-    * [ ] StarWars
+    * [x] Last commit
+* [x] Add some secrets
+    * [x] 420
+    * [x] StarWars

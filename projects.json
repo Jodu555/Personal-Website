@@ -44,8 +44,10 @@
 			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
 		},
 		{
-			"icon": false,
-			"lText": "Ez-Uploader",
+			"icon": true,
+			"lText": "images/ez-uploader.ico",
+			"_icon": false,
+			"_lText": "Ez-Uploader",
 			"title": "Ez-Uploader",
 			"description": "An Image and Text Uploader written in <span class=\"nodejs\">NodeJs</span> with the abillity to sort them in nested folders or also share ",
 			"ghLink": "https://github.com/Jodu555/Ez-uploader.de",

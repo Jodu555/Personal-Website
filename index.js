@@ -39,14 +39,8 @@ function animateCountDown(prefix, till) {
 }
 
 window.addEventListener('scroll', (e) => {
-    const selector = '#about';
-    if (isUnder(selector)) {
-        bsOffcanvas.hide();
-    }
-    if (isOver(selector)) {
-        bsOffcanvas.show();
-    }
-})
+
+});
 
 function isOver(sel) {
     const rect = document.querySelector(sel).getBoundingClientRect();

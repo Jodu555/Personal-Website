@@ -39,7 +39,18 @@ function animateCountDown(prefix, till) {
 }
 
 window.addEventListener('scroll', (e) => {
-
+    var x = window.matchMedia("(max-width: 930px)");
+    if (!x.matches) {
+        const selector = '#about';
+        if (isUnder(selector)) {
+            bsOffcanvas.hide();
+        }
+        if (isOver(selector)) {
+            bsOffcanvas.show();
+        }
+    } else {
+        bsOffcanvas.hide();
+    }
 });
 
 function isOver(sel) {

@@ -77,6 +77,17 @@ async function loadLastUpdateData() {
     quotes = data.quotes;
     quouteIdx = 0;
     projectIdx = 0;
+
+    data.projects.map(project => {
+        let languages = [];
+        const docElem = new DOMParser().parseFromString(project.description, 'text/html').documentElement;
+        docElem.querySelectorAll('*').forEach(element => {
+            if (element.nodeName == 'SPAN')
+                languages = languages.concat([...element.classList])
+        });
+        project.languages = languages;
+    })
+
     projects = data.projects.chunkIt(4);
 
     loadMoreProjects();

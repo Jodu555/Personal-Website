@@ -30,17 +30,18 @@
 			"pLink": "https://www.npmjs.com/package/@jodu555/mysqlapi"
 		},
 		{
+			"icon": true,
+			"lText": "images/avatar.png",
+			"title": "Personal Website",
+			"description": "The Website were you currently watching Written in <span class=\"html\">Html</span> and <span class=\"js\">JavaScript</span> To Display something about me!",
+			"ghLink": "https://github.com/Jodu555/Personal-Website",
+			"pLink": "https://jodu555.de"
+		},
+		{
 			"icon": false,
 			"lText": "Netty\nBackend",
 			"title": "Netty-Backend",
 			"description": "A Whole NettyBackend written in <span class=\"java\">Java</span> used like Express with middlewares and routes",
-			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
-		},
-		{
-			"icon": false,
-			"lText": "Amazon\nPrice\nTracker",
-			"title": "Amazon-Price-Tracker",
-			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user get mailed!",
 			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
 		},
 		{
@@ -52,6 +53,13 @@
 			"description": "An Image and Text Uploader written in <span class=\"nodejs\">NodeJs</span> with the abillity to sort them in nested folders or also share ",
 			"ghLink": "https://github.com/Jodu555/Ez-uploader.de",
 			"pLink": "https://ez-uploader.de"
+		},
+		{
+			"icon": false,
+			"lText": "Amazon\nPrice\nTracker",
+			"title": "Amazon-Price-Tracker",
+			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user get mailed!",
+			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
 		},
 		{
 			"icon": false,

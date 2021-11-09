@@ -7,6 +7,8 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
     * [x] First created Projects
     * [x] Last commit
 * [x] Add some secrets
+    * [ ] Add a display: Yeah you found a secret...
+        * [ ] Keep track of the found secrets in some like localStore
     * [x] 420
     * [x] StarWars
 * [ ] Add a comming Soon alternative

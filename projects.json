@@ -33,7 +33,7 @@
 			"icon": true,
 			"lText": "images/avatar.png",
 			"title": "Personal Website",
-			"description": "The Website were you currently watching Written in <span class=\"html\">Html</span> and <span class=\"js\">JavaScript</span> To Display something about me!",
+			"description": "The Website were you currently watching Written in <span class=\"html\">Html</span>, <span class=\"js\">JavaScript</span> and <span class=\"css\">CSS</span> To Display something about me!",
 			"ghLink": "https://github.com/Jodu555/Personal-Website",
 			"pLink": "https://jodu555.de"
 		},

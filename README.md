@@ -11,3 +11,4 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
     * [x] StarWars
 * [ ] Add a comming Soon alternative
     * [ ] With the opportunity to edit in js or so
+* [ ] Add the ability to search through all the Projects

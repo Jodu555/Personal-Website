@@ -38,6 +38,9 @@
 .vue {
     color: #42b983;
 }
+.html {
+    color: #8F3A19;
+}
 
 #secret-caller-ca {
     cursor: pointer;

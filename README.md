@@ -6,6 +6,8 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
 * [x] More Stats
     * [x] First created Projects
     * [x] Last commit
+    * [ ] Avarage Commits per Day
+    * [ ] Avarage most active project
 * [x] Add some secrets
     * [ ] Add a display: Yeah you found a secret...
         * [ ] Keep track of the found secrets in some like localStore

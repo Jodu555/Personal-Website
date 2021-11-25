@@ -18,4 +18,9 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
 * [ ] Add the ability to search through all the Projects
 * [ ] Under Projects
     * [ ] Ticket System
+        * [ ] Label for every Project
+        * [ ] Chat System
     * [ ] Feedback System
+        * [ ] Label for every Project
+        * [ ] Comment System : Comment on a e.g. Feature request
+        * [ ] Like System : Like a e.g. Feature request up

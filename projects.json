@@ -55,21 +55,21 @@
 			"pLink": "https://ez-uploader.de"
 		},
 		{
+			"icon": false,
+			"lText": "Amazon\nPrice\nTracker",
+			"title": "Amazon-Price-Tracker",
+			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user get mailed!",
+			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
+		},
+		{
 			"icon": true,
-			"lText": "images/github-information-api.ico",
+			"lText": "images/github-information-api.png",
 			"_icon": false,
 			"_lText": "Github-Information",
 			"title": "Github-Information",
 			"description": "An Github Information API written in <span class=\"nodejs\">NodeJs</span> <span class=\"js\">JS</span> and <span class=\"css\">CSS</span> to display stats about a github user! But see for yourself",
 			"ghLink": "https://github.com/Jodu555/github-information-api",
 			"pLink": "https://github-stats.jodu555.de/"
-		},
-		{
-			"icon": false,
-			"lText": "Amazon\nPrice\nTracker",
-			"title": "Amazon-Price-Tracker",
-			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user get mailed!",
-			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
 		},
 		{
 			"icon": false,

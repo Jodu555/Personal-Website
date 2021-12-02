@@ -1,10 +1,8 @@
 Object.defineProperty(Array.prototype, 'chunkIt', {
-    value: (chunkSize) => {
-        const array = this;
-        return [].concat.apply([],
-            array.map(function (elem, i) {
-                return i % chunkSize ? [] : [array.slice(i, i + chunkSize)];
-            })
-        );
+    value: function (chunkSize) {
+        var R = [];
+        for (var i = 0; i < this.length; i += chunkSize)
+            R.push(this.slice(i, i + chunkSize));
+        return R;
     }
 });

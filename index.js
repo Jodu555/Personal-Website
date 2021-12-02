@@ -90,6 +90,7 @@ async function loadLastUpdateData() {
 
     projects = data.projects.chunkIt(4);
 
+
     loadMoreProjects();
 })();
 

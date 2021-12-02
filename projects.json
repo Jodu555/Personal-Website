@@ -55,6 +55,16 @@
 			"pLink": "https://ez-uploader.de"
 		},
 		{
+			"icon": true,
+			"lText": "images/github-information-api.ico",
+			"_icon": false,
+			"_lText": "Github-Information",
+			"title": "Github-Information",
+			"description": "An Github Information API written in <span class=\"nodejs\">NodeJs</span> <span class=\"js\">JS</span> and <span class=\"css\">CSS</span> to display stats about a github user! But see for yourself",
+			"ghLink": "https://github.com/Jodu555/github-information-api",
+			"pLink": "https://github-stats.jodu555.de/"
+		},
+		{
 			"icon": false,
 			"lText": "Amazon\nPrice\nTracker",
 			"title": "Amazon-Price-Tracker",

@@ -152,9 +152,11 @@ removeHash();
 
 function removeHash() {
     const loc = window.location
+    console.log(loc.hash);
     let scrollV, scrollH;
     if (loc.hash.includes('ext-')) {
         loc.hash = loc.hash.split('ext-')[1];
+        console.log(loc.hash);
     } else {
         scrollV = document.body.scrollTop;
         scrollH = document.body.scrollLeft;
@@ -163,7 +165,7 @@ function removeHash() {
         document.body.scrollLeft = scrollH;
     }
     if ("pushState" in history) {
-        history.pushState("", document.title, loc.pathname + loc.search);
+        history.pushState("", document.title, loc.pathname + loc.search + loc.hash);
     }
 }
 

@@ -3,8 +3,7 @@ const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 //              !!!!!!!!      Format: MONTH.DAY.YEAR HOUR:MINUTE      !!!!!!!!
-const comingDate = new Date(Date.parse('12.04.2021 10:05'));
-
+const comingDate = new Date(Date.parse('12.04.2021 10:03'));
 const coming_SOON = comingDate.getTime() - Date.now() > 0;
 
 let quotes;
@@ -31,8 +30,8 @@ setInterval(() => {
 function renderStats() {
     if (coming_SOON) {
         if (comingDate.getTime() - Date.now() < 0) {
-            console.log(123);
             window.location.reload();
+            return;
         }
         animateCountDown('coming-soon-', comingDate.getTime(), true);
     } else {

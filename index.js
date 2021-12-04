@@ -3,7 +3,10 @@ const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 const comming_SOON = true;
-const comingDate = new Date(Date.parse('04.12.2021 10:00'));
+const comingDate = new Date(Date.parse('12.04.2021 10:00'));
+
+console.log(comingDate.toLocaleString());
+console.log(new Date(Date.now()).toLocaleString());
 
 let quotes;
 let quouteIdx;
@@ -28,14 +31,19 @@ setInterval(() => {
 
 function renderStats() {
     if (comming_SOON)
-        animateCountDown('comming-soon-', comingDate.getTime() - Date.now());
+        animateCountDown('comming-soon-', comingDate.getTime(), true);
     animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
     animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
 }
 
-function animateCountDown(prefix, till) {
+function animateCountDown(prefix, till, inverse) {
     const now = Date.now();
-    const diff = now - till
+    let diff;
+    if (inverse) {
+        diff = till - now;
+    } else {
+        diff = now - till;
+    }
 
     const second = 1000;
     const minute = second * 60;

@@ -2,9 +2,10 @@ const stats_API_URL = 'https://github-stats.jodu555.de/api/lastCommit/Jodu555'
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
-const comming_SOON = true;
 //              !!!!!!!!      Format: MONTH.DAY.YEAR HOUR:MINUTE      !!!!!!!!
 const comingDate = new Date(Date.parse('12.04.2021 10:00'));
+
+const comming_SOON = comingDate.getTime() - Date.now() > 0;
 
 let quotes;
 let quouteIdx;
@@ -29,6 +30,8 @@ setInterval(() => {
 
 function renderStats() {
     if (comming_SOON) {
+        if (comingDate.getTime() - Date.now() < 0)
+            window.location.reload();
         animateCountDown('comming-soon-', comingDate.getTime(), true);
     } else {
         animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());

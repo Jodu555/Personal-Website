@@ -2,12 +2,21 @@ const stats_API_URL = 'https://github-stats.jodu555.de/api/lastCommit/Jodu555'
 const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
+const comming_SOON = true;
+const comingDate;
+
 let quotes;
 let quouteIdx;
 let projects;
 let projectIdx;
 
 let lastUpdatedInfo;
+
+if (comming_SOON) {
+    document.querySelector('#normal').style.display = 'none';
+} else {
+    document.querySelector('#comingSoon').style.display = 'none';
+}
 
 setInterval(() => {
     renderStats();

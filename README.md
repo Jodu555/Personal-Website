@@ -13,8 +13,8 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
         * [ ] Keep track of the found secrets in some like localStore
     * [x] 420
     * [x] StarWars
-* [ ] Add a comming Soon alternative
-    * [ ] With the opportunity to edit in js or so
+* [x] Add a comming Soon alternative
+    * [x] With the opportunity to edit in js or so
 * [ ] Add the ability to search through all the Projects
 * [ ] Under Projects
     * [ ] Ticket System

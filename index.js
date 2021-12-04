@@ -3,7 +3,7 @@ const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 const comming_SOON = true;
-const comingDate;
+const comingDate = new Date(Date.parse('04.12.2021 10:00'));
 
 let quotes;
 let quouteIdx;
@@ -27,6 +27,8 @@ setInterval(() => {
 }, 250000);
 
 function renderStats() {
+    if (comming_SOON)
+        animateCountDown('comming-soon-', comingDate.getTime() - Date.now());
     animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
     animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
 }

@@ -58,7 +58,7 @@ function animateCountDown(prefix, till, inverse) {
     document.querySelector('#' + prefix + 'second').innerText = Math.floor((diff % minute) / second);
 
 }
-if (comming_SOON)
+if (!comming_SOON)
     window.addEventListener('scroll', (e) => {
         var x = window.matchMedia("(max-width: 930px)");
         if (!x.matches) {
@@ -89,7 +89,7 @@ async function loadLastUpdateData() {
     const data = await response.json();
     lastUpdatedInfo = data.data.info;
 }
-if (comming_SOON)
+if (!comming_SOON)
     (async () => {
         loadLastUpdateData();
 

@@ -3,9 +3,9 @@ const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 //              !!!!!!!!      Format: MONTH.DAY.YEAR HOUR:MINUTE      !!!!!!!!
-const comingDate = new Date(Date.parse('12.04.2021 10:00'));
+const comingDate = new Date(Date.parse('12.04.2021 10:05'));
 
-const comming_SOON = comingDate.getTime() - Date.now() > 0;
+const coming_SOON = comingDate.getTime() - Date.now() > 0;
 
 let quotes;
 let quouteIdx;
@@ -14,7 +14,7 @@ let projectIdx;
 
 let lastUpdatedInfo;
 
-if (comming_SOON) {
+if (coming_SOON) {
     document.querySelector('#normal').style.display = 'none';
 } else {
     document.querySelector('#comingSoon').style.display = 'none';
@@ -29,10 +29,12 @@ setInterval(() => {
 }, 250000);
 
 function renderStats() {
-    if (comming_SOON) {
-        if (comingDate.getTime() - Date.now() < 0)
+    if (coming_SOON) {
+        if (comingDate.getTime() - Date.now() < 0) {
+            console.log(123);
             window.location.reload();
-        animateCountDown('comming-soon-', comingDate.getTime(), true);
+        }
+        animateCountDown('coming-soon-', comingDate.getTime(), true);
     } else {
         animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
         animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
@@ -59,7 +61,7 @@ function animateCountDown(prefix, till, inverse) {
     document.querySelector('#' + prefix + 'second').innerText = Math.floor((diff % minute) / second);
 
 }
-if (!comming_SOON)
+if (!coming_SOON)
     window.addEventListener('scroll', (e) => {
         var x = window.matchMedia("(max-width: 930px)");
         if (!x.matches) {
@@ -90,7 +92,7 @@ async function loadLastUpdateData() {
     const data = await response.json();
     lastUpdatedInfo = data.data.info;
 }
-if (!comming_SOON)
+if (!coming_SOON)
     (async () => {
         loadLastUpdateData();
 

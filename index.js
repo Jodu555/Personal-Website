@@ -3,10 +3,8 @@ const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 const comming_SOON = true;
+//              !!!!!!!!      Format: MONTH.DAY.YEAR HOUR:MINUTE      !!!!!!!!
 const comingDate = new Date(Date.parse('12.04.2021 10:00'));
-
-console.log(comingDate.toLocaleString());
-console.log(new Date(Date.now()).toLocaleString());
 
 let quotes;
 let quouteIdx;

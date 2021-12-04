@@ -30,10 +30,12 @@ setInterval(() => {
 }, 250000);
 
 function renderStats() {
-    if (comming_SOON)
+    if (comming_SOON) {
         animateCountDown('comming-soon-', comingDate.getTime(), true);
-    animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
-    animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
+    } else {
+        animateCountDown('first-repo-', new Date('6 Jun 2019 19:17').getTime());
+        animateCountDown('last-commit-', lastUpdatedInfo ? lastUpdatedInfo.lastUpdated : new Date(-1).getTime());
+    }
 }
 
 function animateCountDown(prefix, till, inverse) {
@@ -56,21 +58,21 @@ function animateCountDown(prefix, till, inverse) {
     document.querySelector('#' + prefix + 'second').innerText = Math.floor((diff % minute) / second);
 
 }
-
-window.addEventListener('scroll', (e) => {
-    var x = window.matchMedia("(max-width: 930px)");
-    if (!x.matches) {
-        const selector = '#about';
-        if (isUnder(selector)) {
+if (comming_SOON)
+    window.addEventListener('scroll', (e) => {
+        var x = window.matchMedia("(max-width: 930px)");
+        if (!x.matches) {
+            const selector = '#about';
+            if (isUnder(selector)) {
+                bsOffcanvas.hide();
+            }
+            if (isOver(selector)) {
+                bsOffcanvas.show();
+            }
+        } else {
             bsOffcanvas.hide();
         }
-        if (isOver(selector)) {
-            bsOffcanvas.show();
-        }
-    } else {
-        bsOffcanvas.hide();
-    }
-});
+    });
 
 function isOver(sel) {
     const rect = document.querySelector(sel).getBoundingClientRect();
@@ -87,31 +89,31 @@ async function loadLastUpdateData() {
     const data = await response.json();
     lastUpdatedInfo = data.data.info;
 }
+if (comming_SOON)
+    (async () => {
+        loadLastUpdateData();
 
-(async () => {
-    loadLastUpdateData();
+        const response = await fetch('projects.json');
+        const data = await response.json();
+        quotes = data.quotes;
+        quouteIdx = 0;
+        projectIdx = 0;
 
-    const response = await fetch('projects.json');
-    const data = await response.json();
-    quotes = data.quotes;
-    quouteIdx = 0;
-    projectIdx = 0;
+        data.projects.map(project => {
+            let languages = [];
+            const docElem = new DOMParser().parseFromString(project.description, 'text/html').documentElement;
+            docElem.querySelectorAll('*').forEach(element => {
+                if (element.nodeName == 'SPAN')
+                    languages = languages.concat([...element.classList])
+            });
+            project.languages = languages;
+        })
 
-    data.projects.map(project => {
-        let languages = [];
-        const docElem = new DOMParser().parseFromString(project.description, 'text/html').documentElement;
-        docElem.querySelectorAll('*').forEach(element => {
-            if (element.nodeName == 'SPAN')
-                languages = languages.concat([...element.classList])
-        });
-        project.languages = languages;
-    })
-
-    projects = data.projects.chunkIt(4);
+        projects = data.projects.chunkIt(4);
 
 
-    loadMoreProjects();
-})();
+        loadMoreProjects();
+    })();
 
 function loadMoreProjects() {
     document.querySelector('#loadmoreBtn') && document.querySelector('#loadmoreBtn').remove();

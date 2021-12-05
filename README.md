@@ -17,6 +17,7 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
     * [x] With the opportunity to edit in js or so
 * [ ] Load the coming Soon thingi also from the json file
     * [ ] Write an Backend for the projects, quotes and coming soon
+        * [ ] Maybe with nice Backend etc
 * [ ] Add the ability to search through all the Projects
 * [ ] Under Projects
     * [ ] Ticket System

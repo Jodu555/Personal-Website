@@ -3,7 +3,7 @@ const projectStore = document.querySelector('#projectStore');
 const bsOffcanvas = new bootstrap.Offcanvas(document.querySelector('#offcanvasScrolling'));
 
 //              !!!!!!!!      Format: MONTH.DAY.YEAR HOUR:MINUTE      !!!!!!!!
-const comingDate = new Date(Date.parse('12.11.2021 17:08'));
+const comingDate = new Date(Date.parse('12.11.2021 17:22'));
 const coming_SOON = comingDate.getTime() - Date.now() > 0;
 
 let quotes;
@@ -58,6 +58,11 @@ function animateCountDown(prefix, till, inverse) {
     document.querySelector('#' + prefix + 'hour').innerText = Math.floor((diff % day) / hour);
     document.querySelector('#' + prefix + 'minute').innerText = Math.floor((diff % hour) / minute);
     document.querySelector('#' + prefix + 'second').innerText = Math.floor((diff % minute) / second);
+
+    document.querySelector('#' + prefix + 'day-show').innerText = Math.floor(diff / day) !== 1 ? 'Days' : 'Day';
+    document.querySelector('#' + prefix + 'hour-show').innerText = Math.floor((diff % day) / hour) !== 1 ? 'Hours' : 'Hour';
+    document.querySelector('#' + prefix + 'minute-show').innerText = Math.floor((diff % hour) / minute) !== 1 ? 'Minutes' : 'Minute';
+    document.querySelector('#' + prefix + 'second-show').innerText = Math.floor((diff % minute) / second) !== 1 ? 'Seconds' : 'Second';
 
 }
 if (!coming_SOON)

@@ -188,12 +188,20 @@
 			main {
 				padding-bottom: 3.5rem;
 			}
+			.mirror {
+				display: inline-block;
+
+				-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+				-moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+				-o-transform: matrix(-1, 0, 0, 1, 0, 0);
+				transform: matrix(-1, 0, 0, 1, 0, 0);
+			}
 		</style>
 		<main id="comingSoon">
 			<section class="container-fluid" style="height: 49vh">
 				<div style="margin-top: 17vh" data-aos="fade-left">
 					<h1 class="text-center diary" style="padding-bottom: 11vh; font-size: 3.5rem">
-						🚀🎉 Comming Soon 🎉🚀
+						🚀🎉 Comming Soon <span class="mirror">🚀🎉</span>
 					</h1>
 					<div class="row">
 						<h3 class="col text-center soonText" id="coming-soon-day">0</h3>

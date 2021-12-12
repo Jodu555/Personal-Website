@@ -96,7 +96,9 @@ async function loadLastUpdateData() {
     const data = await response.json();
     lastUpdatedInfo = data.data.info;
 }
+
 if (!coming_SOON)
+    //Load JSON Projects
     (async () => {
         loadLastUpdateData();
 

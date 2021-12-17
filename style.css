@@ -56,42 +56,6 @@ main {
     font-weight: 500;
 }
 
-.java {
-    color: #e97b18;
-}
-
-.js {
-    color: #ead41c;
-}
-
-.php {
-    color: #8892bf;
-}
-
-.nodejs {
-    color: #026e00;
-}
-
-.angular {
-    color: #dd0031;
-}
-
-.react {
-    color: #61dafb;
-}
-
-.vue {
-    color: #42b983;
-}
-
-.html {
-    color: #8F3A19;
-}
-
-.css {
-    color: #193D91;
-}
-
 #secret-caller-ca {
     cursor: pointer;
 }

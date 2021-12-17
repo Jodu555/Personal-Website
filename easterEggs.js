@@ -112,7 +112,7 @@ function appendEmoji(setEmoji) {
     }, 5000);
 }
 
-console.log(new Date(Date.now()).getMonth());
+
 
 let time;
 
@@ -132,4 +132,16 @@ function render() {
     }
     time = Date.now();
     window.requestAnimationFrame(render);
+}
+
+console.log(isBirthday());
+
+function isBirthday() {
+    const current = new Date(Date.now());
+    return current.getMonth() == 11 && current.getDate() == 25;
+}
+
+function isNewYear() {
+    const current = new Date(Date.now());
+    return current.getMonth() == 0 && current.getDate() == 1 || current.getMonth() == 11 && current.getDate() == 31;
 }

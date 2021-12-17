@@ -1,46 +1,93 @@
+.soonText {
+    font-size: 50px;
+}
+
+.soonTextUnder {
+    font-size: 40px;
+}
+
+.footer {
+    position: absolute;
+    background-color: #f8f9fa;
+    height: 3.5rem;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.footer-text {
+    padding-top: 1rem;
+}
+
+main {
+    padding-bottom: 3.5rem;
+}
+
+.mirror {
+    display: inline-block;
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 .diary {
     font-family: 'Architects Daughter', cursive;
 }
+
 .enter {
     height: 50vh;
 }
+
 .avatar {
     height: 80vh;
 }
+
 .middle {
     transform: translateY(calc(50vh - 100% - 5.5rem));
 }
+
 .info-text {
     font-weight: 400;
     color: #333333;
 }
+
 .highlight {
     font-weight: 500;
 }
+
 .java {
     color: #e97b18;
 }
+
 .js {
     color: #ead41c;
 }
+
 .php {
     color: #8892bf;
 }
+
 .nodejs {
     color: #026e00;
 }
+
 .angular {
     color: #dd0031;
 }
+
 .react {
     color: #61dafb;
 }
+
 .vue {
     color: #42b983;
 }
+
 .html {
     color: #8F3A19;
 }
+
 .css {
     color: #193D91;
 }
@@ -61,10 +108,8 @@
     transition: all 1s linear;
 }
 
-@media (max-width: 1150px) 
-{
-    #statsFrame
-    {
+@media (max-width: 1150px) {
+    #statsFrame {
         display: none;
     }
 }

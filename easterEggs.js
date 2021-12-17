@@ -115,13 +115,27 @@ function appendEmoji(setEmoji) {
 
 
 let time;
+let iterations = 0;
+let emoji = '';
+let stop = 155;
 
-let emoji = null; '🚀'
+handleSpecialDays();
 
-// window.requestAnimationFrame(render);
+function handleSpecialDays() {
+    if (isNewYear()) {
 
+    }
+    if (isBirthday()) {
+
+    }
+
+    if (isNewYear() || isBirthday()) {
+        window.requestAnimationFrame(render);
+    }
+}
 
 function render() {
+    iterations++;
     if (time) {
         const delta = Date.now() - time;
 
@@ -131,10 +145,11 @@ function render() {
         }
     }
     time = Date.now();
+    console.log(iterations);
+    if (iterations > stop) return;
     window.requestAnimationFrame(render);
 }
 
-console.log(isBirthday());
 
 function isBirthday() {
     const current = new Date(Date.now());

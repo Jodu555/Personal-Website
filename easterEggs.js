@@ -93,3 +93,28 @@ function animateHanf() {
     if (next)
         window.requestAnimationFrame(animateHanf);
 }
+
+
+const emojis = ['💙', '💚', '💜', '🎇', '🎉', '🚀', '🎶', '💖'];
+
+function appendEmoji(setEmoji) {
+    const emoji = document.createElement('div');
+    emoji.classList.add('emoji');
+    emoji.style.left = Math.random() * 100 + 'vw';
+    emoji.style.animationDuration = Math.random() * 2 + 2 + 's';
+    emoji.style.fontSize = Math.floor(Math.random() * 20) + 20 + 'px';
+    if (!setEmoji) emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+    if (setEmoji) emoji.innerText = setEmoji;
+
+    document.body.appendChild(emoji);
+    setTimeout(() => {
+        emoji.remove();
+    }, 5000);
+}
+
+// window.requestAnimationFrame(render);
+
+function render() {
+    appendEmoji('🚀');
+    window.requestAnimationFrame(render);
+}

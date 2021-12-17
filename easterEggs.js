@@ -103,8 +103,16 @@ function appendEmoji(setEmoji) {
     emoji.style.left = Math.random() * 100 + 'vw';
     emoji.style.animationDuration = Math.random() * 2 + 2 + 's';
     emoji.style.fontSize = Math.floor(Math.random() * 20) + 20 + 'px';
-    if (!setEmoji) emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-    if (setEmoji) emoji.innerText = setEmoji;
+    if (setEmoji) {
+        if (!Array.isArray(setEmoji)) {
+            emoji.innerText = setEmoji;
+        } else {
+            emoji.innerText = setEmoji[Math.floor(Math.random() * setEmoji.length)]
+        }
+
+    } else {
+        emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+    }
 
     document.body.appendChild(emoji);
     setTimeout(() => {
@@ -123,10 +131,10 @@ handleSpecialDays();
 
 function handleSpecialDays() {
     if (isNewYear()) {
-
+        emoji = ['🚀', '🎇'];
     }
     if (isBirthday()) {
-
+        emoji = ['🎉', '🎇', '💖', '🎶', '🍰', '💙', '🎂', '🎂'];
     }
 
     if (isNewYear() || isBirthday()) {

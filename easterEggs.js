@@ -112,9 +112,24 @@ function appendEmoji(setEmoji) {
     }, 5000);
 }
 
+console.log(new Date(Date.now()).getMonth());
+
+let time;
+
+let emoji = null; '🚀'
+
 // window.requestAnimationFrame(render);
 
+
 function render() {
-    appendEmoji('🚀');
+    if (time) {
+        const delta = Date.now() - time;
+
+        const iter = Math.floor(delta / 10);
+        for (let i = 0; i < iter; i++) {
+            appendEmoji(emoji);
+        }
+    }
+    time = Date.now();
     window.requestAnimationFrame(render);
 }

@@ -91,3 +91,18 @@ main {
         transform: translateY(115vh);
     }
 }
+
+.birthday {
+    width: 35vw;
+    height: 35vh;
+    position: absolute;
+    right: 25vw;
+    top: 25vh;
+    z-index: 1000;
+    transform: translateX(-25%);
+    background-color: rgba(234, 0, 255, 0.582);
+}
+
+.birthday h1 {
+    text-align: center !important;
+}

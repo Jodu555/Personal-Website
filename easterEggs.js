@@ -131,10 +131,10 @@ handleSpecialDays();
 
 function handleSpecialDays() {
     if (isNewYear()) {
-        emoji = ['🚀', '🎇', '⏳', '🧨', '🎆', '⌛'];
+        emoji = ['🚀', '🎇', '⏳', '🧨', '🎆', '⌛', '👑', '🎈'];
     }
     if (isBirthday()) {
-        emoji = ['🎉', '🎇', '💖', '🎶', '🍰', '💙', '🎂', '✨', '🎁', '🎄', '👑'];
+        emoji = ['🎉', '🎇', '💖', '🎶', '🍰', '💙', '🎂', '✨', '🎁', '🎄', '👑', '🎈'];
     }
 
     if (isNewYear() || isBirthday()) {
@@ -160,6 +160,7 @@ function render() {
 
 
 function isBirthday() {
+
     const current = new Date(Date.now());
     return current.getMonth() == 11 && current.getDate() == 25;
 }

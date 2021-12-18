@@ -139,15 +139,12 @@ const specialList = [
 
 let time;
 let iterations = 0;
-let emoji = '';
-let stop = 155;
 
 handleSpecialDays();
 
 function handleSpecialDays() {
 
     const item = specialList.filter(e => e.is())[0];
-    emoji = item.emojis;
     Swal.fire({
         title: `<h1 style="font-size: 4rem;" class="diary">Its ${item.title}!</h1>`,
         icon: 'success',
@@ -157,24 +154,24 @@ function handleSpecialDays() {
         confirmButtonText: `<i class="fa fa-thumbs-up"></i> well < better < ${item.concatText ? item.concatText : item.title} !`,
     }).then((result) => {
         console.log(result);
-        window.requestAnimationFrame(render);
+        window.requestAnimationFrame(() => render(item));
     });
 }
 
-function render() {
+function render(item) {
     iterations++;
     if (time) {
         const delta = Date.now() - time;
 
         const iter = Math.floor(delta / 10);
         for (let i = 0; i < iter; i++) {
-            appendEmoji(emoji);
+            appendEmoji(item.emojis);
         }
     }
     time = Date.now();
     console.log(iterations);
-    if (iterations > stop) return;
-    window.requestAnimationFrame(render);
+    if (iterations > (item.stop || 155)) return;
+    window.requestAnimationFrame(() => render(item));
 }
 
 

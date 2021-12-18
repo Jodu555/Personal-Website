@@ -101,7 +101,7 @@ function appendEmoji(setEmoji) {
     const emoji = document.createElement('div');
     emoji.classList.add('emoji');
     emoji.style.left = Math.random() * 100 + 'vw';
-    emoji.style.animationDuration = Math.random() * 2 + 2 + 's';
+    emoji.style.animationDuration = Math.random() * 2 + 1 + 's';
     emoji.style.fontSize = Math.floor(Math.random() * 20) + 20 + 'px';
     if (setEmoji) {
         if (!Array.isArray(setEmoji)) {
@@ -120,6 +120,21 @@ function appendEmoji(setEmoji) {
     }, 5000);
 }
 
+const specialList = [
+    {
+        title: 'New Year',
+        swalEmojis: '🎇✨🎈🧨',
+        emojis: ['🚀', '🎇', '⏳', '🧨', '🎆', '⌛', '👑', '🎈'],
+        is: () => isNewYear(),
+    },
+    {
+        title: 'Birthday',
+        swalEmojis: '🎉🎂🎁💙',
+        concatText: 'me',
+        emojis: ['🎉', '🎇', '💖', '🎶', '🍰', '💙', '🎂', '✨', '🎁', '🎄', '👑', '🎈'],
+        is: () => isNewYear(),
+    }
+]
 
 
 let time;
@@ -130,27 +145,20 @@ let stop = 155;
 handleSpecialDays();
 
 function handleSpecialDays() {
-    if (isNewYear()) {
-        emoji = ['🚀', '🎇', '⏳', '🧨', '🎆', '⌛', '👑', '🎈'];
-    }
-    if (isBirthday()) {
-        emoji = ['🎉', '🎇', '💖', '🎶', '🍰', '💙', '🎂', '✨', '🎁', '🎄', '👑', '🎈'];
-    }
 
-    if (isNewYear() || isBirthday()) {
-        Swal.fire({
-            title: `<h1 style="font-size: 4rem;" class="diary">Its ${isNewYear() ? 'New Year' : 'Birthday'}!</h1>`,
-            icon: 'success',
-            html: `<h1 style="font-size: 5rem;">${isNewYear() ? '🎇✨🎈🧨' : '🎉🎂🎁💙'}</h1>`,
-            showCloseButton: true,
-            focusConfirm: false,
-            confirmButtonText: `<i class="fa fa-thumbs-up"></i> well < better < ${isNewYear() ? 'New Year' : 'me'} !`,
-        }).then((result) => {
-            console.log(result);
-            window.requestAnimationFrame(render);
-        });
-
-    }
+    const item = specialList.filter(e => e.is())[0];
+    emoji = item.emojis;
+    Swal.fire({
+        title: `<h1 style="font-size: 4rem;" class="diary">Its ${item.title}!</h1>`,
+        icon: 'success',
+        html: `<h1 style="font-size: 5rem;">${item.swalEmojis}</h1>`,
+        showCloseButton: true,
+        focusConfirm: false,
+        confirmButtonText: `<i class="fa fa-thumbs-up"></i> well < better < ${item.concatText ? item.concatText : item.title} !`,
+    }).then((result) => {
+        console.log(result);
+        window.requestAnimationFrame(render);
+    });
 }
 
 function render() {

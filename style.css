@@ -93,16 +93,16 @@ main {
 }
 
 .birthday {
-    width: 35vw;
+    width: 32vw;
     height: 35vh;
     position: absolute;
     right: 25vw;
     top: 25vh;
     z-index: 1000;
-    transform: translateX(-25%);
-    background-color: rgba(234, 0, 255, 0.582);
+    transform: translateX(-27%);
+    background-color: rgb(234, 0, 255);
 }
 
-.birthday h1 {
+.birthday h1, h2 {
     text-align: center !important;
 }

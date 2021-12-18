@@ -168,10 +168,10 @@
 				</div>
 			</div>
 		</header>
-		<section class="birthday" id="birthday">
+		<!-- <section class="birthday" id="birthday">
 			<h1 class="diary">Its Birthday:</h1>
 			<h2 class="diary">Mine</h2>
-		</section>
+		</section> -->
 		<main id="comingSoon">
 			<section class="container-fluid" style="height: 49vh">
 				<div style="margin-top: 17vh" data-aos="fade-left">
@@ -403,8 +403,20 @@
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="utils.js"></script>
 		<script src="index.js"></script>
 		<script src="easterEggs.js"></script>
+
+		<script>
+			Swal.fire({
+				title: '<h1 style="font-size: 4rem;" class="diary">Its Birthday!</h1>',
+				icon: 'success',
+				html: '<h1 style="font-size: 5rem;">🎉🎂🎁</h1>',
+				showCloseButton: true,
+				focusConfirm: false,
+				confirmButtonText: '<i class="fa fa-thumbs-up"></i> Good < Greater < ME !',
+			});
+		</script>
 	</body>
 </html>

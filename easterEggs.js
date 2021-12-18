@@ -132,7 +132,7 @@ const specialList = [
         swalEmojis: '🎉🎂🎁💙',
         concatText: 'me',
         emojis: ['🎉', '🎇', '💖', '🎶', '🍰', '💙', '🎂', '✨', '🎁', '🎄', '👑', '🎈'],
-        is: () => isNewYear(),
+        is: () => isBirthday(),
     }
 ]
 
@@ -145,6 +145,7 @@ handleSpecialDays();
 function handleSpecialDays() {
 
     const item = specialList.filter(e => e.is())[0];
+    if (!item) rreturn;
     Swal.fire({
         title: `<h1 style="font-size: 4rem;" class="diary">Its ${item.title}!</h1>`,
         icon: 'success',
@@ -162,7 +163,6 @@ function render(item) {
     iterations++;
     if (time) {
         const delta = Date.now() - time;
-
         const iter = Math.floor(delta / 10);
         for (let i = 0; i < iter; i++) {
             appendEmoji(item.emojis);
@@ -176,13 +176,13 @@ function render(item) {
 
 
 function isBirthday() {
-    // return true;
+    return true;
     const current = new Date(Date.now());
     return current.getMonth() == 11 && current.getDate() == 25;
 }
 
 function isNewYear() {
-    return true;
+    // return true;
     const current = new Date(Date.now());
     return current.getMonth() == 0 && current.getDate() == 1 || current.getMonth() == 11 && current.getDate() == 31;
 }

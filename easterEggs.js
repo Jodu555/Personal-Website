@@ -136,6 +136,7 @@ const specialList = [
     }
 ]
 
+//TODO: Store the seen in a cookie so it dont comes every time the page gots loaded
 
 let time;
 let iterations = 0;
@@ -170,7 +171,7 @@ function render(item) {
     }
     time = Date.now();
     console.log(iterations);
-    if (iterations > (item.stop || 155)) return;
+    if (iterations > (item.stop || 100)) return;
     window.requestAnimationFrame(() => render(item));
 }
 

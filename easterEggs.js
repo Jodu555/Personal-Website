@@ -138,7 +138,18 @@ function handleSpecialDays() {
     }
 
     if (isNewYear() || isBirthday()) {
-        window.requestAnimationFrame(render);
+        Swal.fire({
+            title: `<h1 style="font-size: 4rem;" class="diary">Its ${isNewYear() ? 'New Year' : 'Birthday'}!</h1>`,
+            icon: 'success',
+            html: `<h1 style="font-size: 5rem;">${isNewYear() ? '🎇✨🎈🧨' : '🎉🎂🎁💙'}</h1>`,
+            showCloseButton: true,
+            focusConfirm: false,
+            confirmButtonText: `<i class="fa fa-thumbs-up"></i> well < better < ${isNewYear() ? 'New Year' : 'me'} !`,
+        }).then((result) => {
+            console.log(result);
+            window.requestAnimationFrame(render);
+        });
+
     }
 }
 
@@ -160,13 +171,13 @@ function render() {
 
 
 function isBirthday() {
-
+    // return true;
     const current = new Date(Date.now());
     return current.getMonth() == 11 && current.getDate() == 25;
 }
 
 function isNewYear() {
-
+    return true;
     const current = new Date(Date.now());
     return current.getMonth() == 0 && current.getDate() == 1 || current.getMonth() == 11 && current.getDate() == 31;
 }

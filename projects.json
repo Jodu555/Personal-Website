@@ -41,7 +41,7 @@
 			"icon": false,
 			"lText": "Netty\nBackend",
 			"title": "Netty-Backend",
-			"description": "A Whole NettyBackend written in <span class=\"java\">Java</span> used like Express with middlewares and routes",
+			"description": "A Whole NettyBackend written in <span class=\"java\">Java</span>! Similar to Express with configurable middlewares and routes!",
 			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
 		},
 		{

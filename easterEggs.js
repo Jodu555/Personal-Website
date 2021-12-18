@@ -146,7 +146,7 @@ handleSpecialDays();
 function handleSpecialDays() {
 
     const item = specialList.filter(e => e.is())[0];
-    if (!item) rreturn;
+    if (!item) return;
     Swal.fire({
         title: `<h1 style="font-size: 4rem;" class="diary">Its ${item.title}!</h1>`,
         icon: 'success',

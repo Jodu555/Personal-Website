@@ -28,6 +28,13 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.css"
+			integrity="sha512-LQ97camar/lOliT/MqjcQs5kWgy6Qz/cCRzzRzUCfv0fotsCTC9ZHXaPQmJV8Xu/PVALfJZ7BDezl5lW3/qBxg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="timeline.css" />
 		<link rel="stylesheet" href="https://docs.jodu555.de/utils/programming-colors.css" />
@@ -404,6 +411,36 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.1/cookieconsent.min.js"
+			integrity="sha512-yXXqOFjdjHNH1GND+1EO0jbvvebABpzGKD66djnUfiKlYME5HGMUJHoCaeE4D5PTG2YsSJf6dwqyUUvQvS0vaA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script>
+			window.addEventListener('load', () => {
+				window.cookieconsent.initialise({
+					palette: {
+						popup: {
+							background: '#252e39',
+						},
+						button: {
+							background: '#14a7d0',
+						},
+					},
+					theme: 'classic',
+					position: 'bottom-right',
+					// revokable: true,
+					content: {
+						message: `This website uses cookies, to deliver you the best possible experience! /
+                        <br/> 
+                        Diese Website verwendet Cookies, um Ihnen das bestmögliche Erlebnis zu bieten!`,
+						dismiss: 'Einverstanden / Agree',
+						link: 'Mehr über Cookies / More about Cookies',
+					},
+				});
+			});
+		</script>
 		<script src="utils.js"></script>
 		<script src="index.js"></script>
 		<script src="easterEggs.js"></script>

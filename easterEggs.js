@@ -144,9 +144,25 @@ let iterations = 0;
 handleSpecialDays();
 
 function handleSpecialDays() {
+    if (!localStorage.getItem('specialDays'))
+        localStorage.setItem('specialDays', JSON.stringify([]));
+
+    // Handle Remove
+    const storageArray = JSON.parse(localStorage.getItem('specialDays'));
+    storageArray.forEach(itemTitle => {
+        const item = specialList.find(e => e.title == itemTitle);
+        if (!item.is())
+            localStorage.setItem('specialDays', JSON.stringify(storageArray.filter(e => e.title == itemTitle)));
+        console.log(item);
+    });
 
     const item = specialList.filter(e => e.is())[0];
     if (!item) return;
+
+    //Handle Already seen
+    if (storageArray.includes(item.title))
+        return;
+
     Swal.fire({
         title: `<h1 style="font-size: 4rem;" class="diary">Its ${item.title}!</h1>`,
         icon: 'success',
@@ -156,6 +172,7 @@ function handleSpecialDays() {
         confirmButtonText: `<i class="fa fa-thumbs-up"></i> well < better < ${item.concatText ? item.concatText : item.title} !`,
     }).then((result) => {
         console.log(result);
+        localStorage.setItem('specialDays', JSON.stringify([item.title]));
         window.requestAnimationFrame(() => render(item));
     });
 }
@@ -170,14 +187,14 @@ function render(item) {
         }
     }
     time = Date.now();
-    console.log(iterations);
+    // console.log(iterations);
     if (iterations > (item.stop || 100)) return;
     window.requestAnimationFrame(() => render(item));
 }
 
 
 function isBirthday() {
-    return true;
+    // return true;
     const current = new Date(Date.now());
     return current.getMonth() == 11 && current.getDate() == 25;
 }

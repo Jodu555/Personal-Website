@@ -178,9 +178,9 @@ function insertQuote(element) {
     quouteIdx++;
 }
 
-removeHash();
+manageHash();
 
-function removeHash() {
+function manageHash() {
     const loc = window.location
     let scrollV, scrollH;
     if (loc.hash.includes('ext-')) {

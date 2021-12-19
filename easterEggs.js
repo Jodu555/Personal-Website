@@ -94,6 +94,22 @@ function animateHanf() {
         window.requestAnimationFrame(animateHanf);
 }
 
+document.querySelector('#copyright').addEventListener('click', () => {
+    animateCopyRight();
+});
+
+function animateCopyRight() {
+    const em = ['🍪', '©', '💥', '👾']
+    for (let i = 0; i < 70; i++) {
+        appendEmoji(em);
+    }
+    setTimeout(() => {
+        for (let i = 0; i < 100; i++) {
+            appendEmoji(em);
+        }
+    }, 300);
+}
+
 
 const emojis = ['💙', '💚', '💜', '🎇', '🎉', '🚀', '🎶', '💖'];
 
@@ -135,8 +151,6 @@ const specialList = [
         is: () => isBirthday(),
     }
 ]
-
-//TODO: Store the seen in a cookie so it dont comes every time the page gots loaded
 
 let time;
 let iterations = 0;

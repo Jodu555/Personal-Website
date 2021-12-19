@@ -86,6 +86,10 @@ main {
     user-select: none;
 }
 
+#copyright {
+    cursor: pointer;
+}
+
 @keyframes fall {
     to {
         transform: translateY(115vh);

@@ -196,7 +196,7 @@ function render(item) {
 
 
 function isBirthday() {
-    return true;
+    // return true;
     const current = new Date(Date.now());
     return current.getMonth() == 11 && current.getDate() == 25;
 }

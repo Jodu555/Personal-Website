@@ -241,3 +241,7 @@ function appendProject(row, project, i) {
     `;
     row.appendChild(col);
 }
+
+function cleanup() {
+    localStorage.setItem('specialDays', JSON.stringify([]));
+}

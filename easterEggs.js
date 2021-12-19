@@ -172,7 +172,7 @@ function handleSpecialDays() {
         confirmButtonText: `<i class="fa fa-thumbs-up"></i> well < better < ${item.concatText ? item.concatText : item.title} !`,
     }).then((result) => {
         console.log(result);
-        localStorage.setItem('specialDays', JSON.stringify([item.title]));
+        localStorage.setItem('specialDays', JSON.stringify([...storageArray, item.title]));
         window.requestAnimationFrame(() => render(item));
     });
 }

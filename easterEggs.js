@@ -144,16 +144,18 @@ let iterations = 0;
 handleSpecialDays();
 
 function handleSpecialDays() {
+    //Handle the not empty function
     if (!localStorage.getItem('specialDays'))
         localStorage.setItem('specialDays', JSON.stringify([]));
 
-    // Handle Remove
-    const storageArray = JSON.parse(localStorage.getItem('specialDays'));
+    // Handle Remove from past seen Special days
+    let storageArray = JSON.parse(localStorage.getItem('specialDays'));
     storageArray.forEach(itemTitle => {
         const item = specialList.find(e => e.title == itemTitle);
-        if (!item.is())
-            localStorage.setItem('specialDays', JSON.stringify(storageArray.filter(e => e.title == itemTitle)));
-        console.log(item);
+        if (!item.is()) {
+            storageArray = storageArray.filter(e => e.title == itemTitle)
+            localStorage.setItem('specialDays', JSON.stringify(storageArray));
+        }
     });
 
     const item = specialList.filter(e => e.is())[0];
@@ -194,7 +196,7 @@ function render(item) {
 
 
 function isBirthday() {
-    // return true;
+    return true;
     const current = new Date(Date.now());
     return current.getMonth() == 11 && current.getDate() == 25;
 }

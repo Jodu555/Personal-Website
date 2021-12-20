@@ -54,17 +54,24 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="../index.html#ext-about">Who I Am</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="../index.html#ext-projects">Projects</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="../index.html#ext-timeline">Timeline</a>
+							<li class="nav-item dropdown">
+								<a
+									class="nav-link active dropdown-toggle"
+									href="#"
+									id="navbarDropdown"
+									role="button"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Home
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<li><a class="dropdown-item" href="../index.html#ext-about">Who I Am</a></li>
+									<li><a class="dropdown-item" href="../index.html#ext-projects">Projects</a></li>
+									<li><hr class="dropdown-divider" /></li>
+									<li><a class="dropdown-item" href="../index.html#ext-timeline">Timeline</a></li>
+									<li><a class="dropdown-item" href="../index.html#ext-stats">Stats</a></li>
+								</ul>
 							</li>
 							<li class="nav-item">
 								<a href="" class="nav-link">Tickets</a>
@@ -73,7 +80,14 @@
 								<a href="" class="nav-link">Feedback</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://github.Jodu555.de">GitHub</a>
+								<a
+									target="_blank"
+									class="nav-link align-center"
+									href="http://github.Jodu555.de"
+									style="padding-top: 0px; padding-bottom: 0px"
+								>
+									<i class="fab fa-github" style="font-size: 2.6vw"></i
+								></a>
 							</li>
 						</ul>
 					</div>

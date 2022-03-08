@@ -3,6 +3,7 @@ This is my Perosnal Website with an bunch of my projects listed and General Info
 
 ## Todo
 * [x] Only display 4 projects show a load more button
+* [ ] Add an Uptime Link: https://www.flaticon.com/premium-icon/database_5753565?term=uptime&related_id=5753565
 * [x] More Stats
     * [x] First created Projects
     * [x] Last commit

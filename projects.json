@@ -56,10 +56,11 @@
 		},
 		{
 			"icon": false,
-			"lText": "Amazon\nPrice\nTracker",
-			"title": "Amazon-Price-Tracker",
-			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user gets mailed!",
-			"ghLink": "https://github.com/Jodu555/MySQLWrapper"
+			"lText": "Auto-Deployer",
+			"title": "Auto-Deployer",
+			"description": "An in <span class=\"nodejs\">NodeJs</span> written Continous Integration system with the abillity to link with github and perform actions and send discord webhooks!",
+			"ghLink": "https://github.com/Jodu555/Auto-Deployer",
+			"pLink": "https://ci.jodu555.de/"
 		},
 		{
 			"icon": true,
@@ -70,6 +71,20 @@
 			"description": "An Github Information API written in <span class=\"nodejs\">NodeJs</span> <span class=\"js\">JS</span> and <span class=\"css\">CSS</span> to display stats about a github user! But see for yourself!",
 			"ghLink": "https://github.com/Jodu555/github-information-api",
 			"pLink": "https://github-stats.jodu555.de/"
+		},
+		{
+			"icon": false,
+			"lText": "Hosting-System",
+			"title": "Hosting System",
+			"description": "An in <span class=\"nodejs\">NodeJs</span> and <span class=\"vue\">Vue</span> written fully configurable Hosting System which can manage vServers and Minecraft-Servers with a integrated ProxmoxAPI a Minecraft Relay and an only for this system written mcmanager api!",
+			"ghLink": "https://github.com/Jodu555/Hosting-System"
+		},
+		{
+			"icon": false,
+			"lText": "Amazon\nPrice\nTracker",
+			"title": "Amazon-Price-Tracker",
+			"description": "An in <span class=\"nodejs\">NodeJs</span> written Amazon Tracker which not only tracks the price it also tracks the delivery and description! And if somehting changes the user gets mailed!",
+			"ghLink": "https://github.com/Jodu555/AmazonPriceTracker"
 		},
 		{
 			"icon": false,

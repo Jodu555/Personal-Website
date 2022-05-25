@@ -55,8 +55,10 @@
 			"pLink": "https://ez-uploader.de"
 		},
 		{
-			"icon": false,
-			"lText": "Auto-Deployer",
+			"icon": true,
+			"lText": "images/ci.png",
+			"_icon": false,
+			"_lText": "Auto-Deployer",
 			"title": "Auto-Deployer",
 			"description": "An in <span class=\"nodejs\">NodeJs</span> written Continous Integration system with the abillity to link with github and perform actions and send discord webhooks!",
 			"ghLink": "https://github.com/Jodu555/Auto-Deployer",
